@@ -6,7 +6,8 @@ Homenaje a Fernand Leger
 
 let p;
 let addingPainters, addingLegers;
-count;
+let maxPainters = 15;
+let count;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -27,7 +28,7 @@ function draw() {
     }
   } else {
     blendMode(BLEND);
-    fill(255, 10);
+    fill(255, 30);
     noStroke();
     rect(0, 0, width, height);
     count++;
@@ -41,6 +42,7 @@ function draw() {
   }
 }
 
+/*
 function mousePressed() {
   // x, y, angle, length, step
   let painter = new Painter(
@@ -53,6 +55,7 @@ function mousePressed() {
   );
   p.push(painter);
 }
+*/
 
 function palete() {
   let pal = ["#86134D", "#580C2E", "#CD1F3F", "#9B743F", "#CEBC00", "#B94900"];
@@ -78,7 +81,7 @@ function init() {
     width / 2,
     height / 2,
     random(TWO_PI),
-    random(90, 600),
+    random(190, 700),
     1,
     palete()
   );
@@ -91,7 +94,8 @@ function debug() {
   let y = height - 400;
   let count = 1;
   blendMode(BLEND);
-  fill(255);
+  fill(255, 150);
+  noStroke();
   rect( 0, height - 420, 400, 400);
   fill(0, 150);
   for(let painter of p){

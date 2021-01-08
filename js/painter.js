@@ -56,11 +56,11 @@ class Painter {
      addingPainters = false;
    }
 
-    if(p.length >= 10){
+    if(p.length >= maxPainters){
       addingPainters = false;
     }
 
-    if (addingPainters && oneIn(100)) {
+    if (addingPainters && oneIn(150)) {
       let newAngle;
       if (oneIn(2)) {
         newAngle = this.a - HALF_PI + random(-0.2, 0.2);
@@ -71,7 +71,7 @@ class Painter {
         nx,
         ny,
         newAngle,
-        random(90, 600),
+        random(190, 700),
         1,
         palete()
       );
