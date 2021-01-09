@@ -115,7 +115,7 @@ function keyTyped(){
 }
 
 function saveFile() {
-	let filename = "acto-del-momento-simultaneo-" + year() + month() + day() + "-" + hour() + minute() + second() + ".png";
+	let filename = "leger-painter-" + year() + month() + day() + "-" + hour() + minute() + second() + ".png";
 	let file = createImage(width, height);
 	file = get();
 	file.save(filename, 'png');
