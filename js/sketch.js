@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  debug();
+  // debug();
   if (addingLegers) {
     for (let painter of p) {
       painter.go();
