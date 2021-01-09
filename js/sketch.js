@@ -42,7 +42,7 @@ function draw() {
   }
 }
 
-/*
+
 function mousePressed() {
   // x, y, angle, length, step
   let painter = new Painter(
@@ -55,7 +55,7 @@ function mousePressed() {
   );
   p.push(painter);
 }
-*/
+
 
 function palete() {
   let pal = ["#86134D", "#580C2E", "#CD1F3F", "#9B743F", "#CEBC00", "#B94900"];
@@ -105,4 +105,18 @@ function debug() {
   }
 
   text("addingPainters? "+addingPainters + "\taddingLegers? "+addingLegers, x, y);
+}
+
+function keyTyped(){
+  if(key === ' '){}
+  if(key === 's' || key === 'S'){
+    saveFile();
+  }
+}
+
+function saveFile() {
+	let filename = "acto-del-momento-simultaneo-" + year() + month() + day() + "-" + hour() + minute() + second() + ".png";
+	let file = createImage(width, height);
+	file = get();
+	file.save(filename, 'png');
 }

@@ -60,7 +60,7 @@ class Painter {
       addingPainters = false;
     }
 
-    if (addingPainters && oneIn(150)) {
+    if (addingPainters && oneIn(99)) {
       let newAngle;
       if (oneIn(2)) {
         newAngle = this.a - HALF_PI + random(-0.2, 0.2);
