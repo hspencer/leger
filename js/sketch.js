@@ -6,7 +6,7 @@ Homenaje a Fernand Leger
 
 let p;
 let addingPainters, addingLegers;
-let maxPainters = 15;
+let maxPainters = 17;
 let count;
 
 function setup() {
@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  // debug();
+  debug();
   if (addingLegers) {
     for (let painter of p) {
       painter.go();
@@ -35,6 +35,7 @@ function draw() {
     if (count > 200) {
       init();
     }
+
     if (p.length === 0) {
       addingPainters = false;
       count = 0;
@@ -94,14 +95,14 @@ function debug() {
   let y = height - 400;
   let count = 1;
   blendMode(BLEND);
-  fill(255, 150);
+  fill(255, 50);
   noStroke();
-  rect( 0, height - 420, 400, 400);
-  fill(0, 150);
+  rect( 0, height - 420, 300, 400);
+  fill(0, 90);
   for(let painter of p){
     text("painter "+count+" length "+painter.length+ " -- alive? "+painter.alive, x, y);
     count++;
-    y+= 16;
+    y+= 16; // interlínea
   }
 
   text("addingPainters? "+addingPainters + "\taddingLegers? "+addingLegers, x, y);
