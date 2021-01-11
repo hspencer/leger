@@ -1,6 +1,8 @@
 /*
 
-Homenaje a Fernand Leger
+Homenaje a Fernand Léger y Jared Tarbell
+
+1971 - 2021 = 50 años de Diseño
 
 */
 
@@ -8,13 +10,17 @@ let p;
 let addingPainters, addingLegers;
 let maxPainters = 17;
 let count;
+let dt;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   init();
+  dt = createDiv('').id("time");
 }
 
 function draw() {
+  let dateAndTime = "<b>"+day()+"/"+month()+"</b>&nbsp;&nbsp;&nbsp;&nbsp;"+hour()+":"+minute()+":"+second();
+  dt.html(dateAndTime);
   // debug();
   if (addingLegers) {
     for (let painter of p) {

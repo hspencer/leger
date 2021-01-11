@@ -4,6 +4,8 @@ Leger Painter
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap');
+
 
 html, body {
   margin: 0;
@@ -11,4 +13,42 @@ html, body {
 }
 canvas {
   display: block;
+}
+
+header {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.7rem;
+  font-weight: 100;
+  position: absolute;
+  top: 4rem;
+}
+
+span {
+  color: white;
+  position: absolute;
+  width: 8em;
+}
+
+#time{
+  position: absolute;
+  top: 27ex;
+  left: 26ex;
+  font-family: mono;
+  font-size: 14px;
+  color: #b9cece;
+}
+#time>b{
+  
+}
+
+
+h1{
+  color: rgba(202, 191, 170, 0.58);
+}
+h1>b{
+  color: rgb(122, 191, 232);
+}
+h1>i{
+  font-style: normal;
+  color: rgb(202, 70, 9);
 }
