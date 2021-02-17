@@ -58,11 +58,12 @@ function mousePressed() {
 
 
 function palete() {
-  let pal = ["#86134D", "#580C2E", "#CD1F3F", "#9B743F", "#CEBC00", "#B94900"];
+  // let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900"];
+  let pal = ["#FFFF00", "#10EEFD", "#FF00FF", "#000000", "#FFFF00"];
   return pal[int(random(pal.length))];
 }
 
-function oneIn(num) {
+function oneIn(num) { 
   if (Math.random(1) < 1 / num) {
     return true;
   } else {
@@ -115,7 +116,7 @@ function keyTyped(){
 }
 
 function saveFile() {
-	let filename = "acto-del-momento-simultaneo-" + year() + month() + day() + "-" + hour() + minute() + second() + ".png";
+	let filename = "leger-" + year() + month() + day() + "-" + hour() + minute() + second() + ".png";
 	let file = createImage(width, height);
 	file = get();
 	file.save(filename, 'png');
