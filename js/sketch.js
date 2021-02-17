@@ -32,7 +32,7 @@ function draw() {
     noStroke();
     rect(0, 0, width, height);
     count++;
-    if (count > 200) {
+    if (count > 250) {
       init();
     }
 
@@ -59,8 +59,8 @@ function mousePressed() {
 
 
 function palete() {
-  // let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900"];
-  let pal = ["#FFFF00", "#10EEFD", "#FF00FF", "#000000", "#FFFF00"];
+  let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900", "#10EEFD", "#FF00FF", "#000"];
+  //let pal = ["#FFFF00", "#10EEFD", "#FF00FF", "#000000", "#FFFF00"];
   return pal[int(random(pal.length))];
 }
 
