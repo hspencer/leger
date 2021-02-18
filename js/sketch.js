@@ -20,8 +20,10 @@ function draw() {
     for (let painter of p) {
       painter.go();
       if (painter.allLegersDead) {
+        
         p.splice(painter, 1);
         addingLegers = false;
+        setTimeout(() => { console.log("Waiting 5..."); }, 5000);
       }else{
         addingLegers = true;
       }
@@ -59,8 +61,7 @@ function mousePressed() {
 
 
 function palete() {
-  let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900", "#10EEFD", "#FF00FF", "#000"];
-  //let pal = ["#FFFF00", "#10EEFD", "#FF00FF", "#000000", "#FFFF00"];
+  let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900",  "#000000", "#FEAF00"];
   return pal[int(random(pal.length))];
 }
 
