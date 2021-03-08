@@ -9,6 +9,13 @@ let addingPainters, addingLegers;
 let maxPainters = 17;
 let count;
 
+
+let pal;
+
+function preload(){
+  pal = loadImage("pal.png");
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   init();
@@ -61,8 +68,8 @@ function mousePressed() {
 
 
 function palete() {
-  let pal = ["#86134D", "#580C2E", "#CD1F3F", "#FFFF00","#9B743F", "#CEBC00", "#B94900",  "#000000", "#FEAF00"];
-  return pal[int(random(pal.length))];
+  let col = pal.get(round(random(pal.width)), round(random(pal.height)));
+  return col;
 }
 
 function oneIn(num) { 
